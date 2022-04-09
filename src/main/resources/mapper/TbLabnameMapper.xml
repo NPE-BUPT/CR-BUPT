@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.ty.lab.dao.TbLabnameMapper">
-  <resultMap id="BaseResultMap" type="com.ty.lab.pojo.TbLabname">
+<mapper namespace="com.npe.cr.dao.TbLabnameMapper">
+  <resultMap id="BaseResultMap" type="com.npe.cr.pojo.TbLabname">
     <id column="id" jdbcType="BIGINT" property="id" />
     <result column="name" jdbcType="VARCHAR" property="name" />
     <result column="state" jdbcType="INTEGER" property="state" />
@@ -67,7 +67,7 @@
   <sql id="Base_Column_List">
     id, name, state
   </sql>
-  <select id="selectByExample" parameterType="com.ty.lab.pojo.TbLabnameExample" resultMap="BaseResultMap">
+  <select id="selectByExample" parameterType="com.npe.cr.pojo.TbLabnameExample" resultMap="BaseResultMap">
     select
     <if test="distinct">
       distinct
@@ -92,19 +92,19 @@
     delete from labname
     where id = #{id,jdbcType=BIGINT}
   </delete>
-  <delete id="deleteByExample" parameterType="com.ty.lab.pojo.TbLabnameExample">
+  <delete id="deleteByExample" parameterType="com.npe.cr.pojo.TbLabnameExample">
     delete from labname
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
     </if>
   </delete>
-  <insert id="insert" parameterType="com.ty.lab.pojo.TbLabname">
+  <insert id="insert" parameterType="com.npe.cr.pojo.TbLabname">
     insert into labname (id, name, state
       )
     values (#{id,jdbcType=BIGINT}, #{name,jdbcType=VARCHAR}, #{state,jdbcType=INTEGER}
       )
   </insert>
-  <insert id="insertSelective" parameterType="com.ty.lab.pojo.TbLabname">
+  <insert id="insertSelective" parameterType="com.npe.cr.pojo.TbLabname">
     insert into labname
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="id != null">
@@ -129,7 +129,7 @@
       </if>
     </trim>
   </insert>
-  <select id="countByExample" parameterType="com.ty.lab.pojo.TbLabnameExample" resultType="java.lang.Long">
+  <select id="countByExample" parameterType="com.npe.cr.pojo.TbLabnameExample" resultType="java.lang.Long">
     select count(*) from labname
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
@@ -161,7 +161,7 @@
       <include refid="Update_By_Example_Where_Clause" />
     </if>
   </update>
-  <update id="updateByPrimaryKeySelective" parameterType="com.ty.lab.pojo.TbLabname">
+  <update id="updateByPrimaryKeySelective" parameterType="com.npe.cr.pojo.TbLabname">
     update labname
     <set>
       <if test="name != null">
@@ -173,7 +173,7 @@
     </set>
     where id = #{id,jdbcType=BIGINT}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.ty.lab.pojo.TbLabname">
+  <update id="updateByPrimaryKey" parameterType="com.npe.cr.pojo.TbLabname">
     update labname
     set name = #{name,jdbcType=VARCHAR},
       state = #{state,jdbcType=INTEGER}
