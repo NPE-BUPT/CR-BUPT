@@ -9,7 +9,7 @@ spring:
     druid:
       url: jdbc:mysql://127.0.0.1:3306/labrec?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=CTT
       username: root
-      password: wei1243212440 # 使用druid数据源
+      password:  # 使用druid数据源
       driver-class-name: com.mysql.jdbc.Driver
       filters: stat
       maxActive: 20
